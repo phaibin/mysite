@@ -1,0 +1,21 @@
+<p>Dear {{ person_name }},</p>
+
+<p>Thanks for placing an order from {{ company }}. It's scheduled to
+ship on {{ ship_date|date:"F j, Y" }}.</p>
+
+{% if True and True %}
+<p>Your warranty information will be included in the packaging.</p>
+{% else %}
+<p>You didn't order a warranty, so you're on your own when
+the products inevitably stop working.</p>
+{% endif %}
+
+<p>Sincerely,<br />{{ company1 }}</p>
+
+{% for item in mylist %}
+{{ item }} {% if not forloop.last %} | {% endif %}
+{% endfor %}
+
+{% ifequal mylist.1 mylist.1 %}
+<p>{{ mylist.0|truncatewords:"5" }}</p>
+{% endifequal %}
